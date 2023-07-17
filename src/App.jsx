@@ -1,4 +1,8 @@
-import LogoSvg from "../src/assets/images/logo.svg";
+import LogoSvg from "./assets/images/logo.svg";
+import PencilImage from "./assets/images/pencil-edit.svg";
+import PencilImage2 from "./assets/images/pencil-edit2.svg";
+import DashImage from "./assets/images/dash.svg";
+import AddImage from "./assets/images/add.svg";
 
 function App() {
     return (
@@ -19,10 +23,58 @@ function App() {
             </header>
 
             <main className="main">
-                <div className="project-name padding-big">Nombre de proyecto</div>
+                <div className="project-name padding-big">
+                    <span>Nombre de proyecto</span>
+                    <img src={PencilImage2} alt="edit-icon" />
+                </div>
                 <div className="project">
-                    <div>Espacios</div>
-                    <div>Tareas</div>
+                    <section className="space-block">
+                        <h2 className="space-block__title">Espacios</h2>
+                        <div className="space-block__items">
+                            <div className="space-block__item">
+                                <span>Diseño</span>
+                                <img src={PencilImage} alt="edit-icon" />
+                            </div>
+                            <div className="space-block__item">
+                                <span>Fronted</span>
+                                <img src={PencilImage} alt="edit-icon" />
+                            </div>
+                            <div className="space-block__item">
+                                <span>Backend</span>
+                                <img src={PencilImage} alt="edit-icon" />
+                            </div>
+                            <div className="space-block__item">
+                                <span>QA</span>
+                                <img src={PencilImage} alt="edit-icon" />
+                            </div>
+                        </div>
+
+                        <div className="space-block__buttons">
+                            <button>Agregar Espacio</button>
+                            <button>Large button</button>
+                        </div>
+                    </section>
+                    <section className="task-block">
+                        <div className="task-block__select">
+                            <label htmlFor="select-task">Acomodar por:</label>
+                            <select id="select-task" className="task-select">
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div className="task-list">
+                            <h2>
+                                <img src={DashImage} alt="dash-icon" />
+                                <span>Lista de tareas</span>
+                            </h2>
+                            <div className="task-list__items">
+                                <div className="task-list__items"></div>
+                            </div>
+                        </div>
+                        <button className="task-block__button-add">
+                            <img src={AddImage} alt="add-icon" />
+                            <span>Tarea</span>
+                        </button>
+                    </section>
                 </div>
             </main>
         </>
