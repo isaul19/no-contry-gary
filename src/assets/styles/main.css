@@ -1,0 +1,95 @@
+/* Import  font-family: 'Josefin Sans'*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+
+/* Import  font-family: 'Roboto' */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@400;500;700&display=swap");
+
+/* Global settings -------------------------- */
+html {
+    box-sizing: border-box;
+}
+
+html,
+body,
+:root {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #021218;
+    font-family: "Roboto";
+    color: #fff;
+    display: block;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utilities  ----------------------------------------- */
+.padding-big {
+    padding-left: 95px;
+    padding-right: 95px;
+}
+
+/* Styles ---------------------------------------------  */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 31px;
+    font-family: "Josefin Sans";
+}
+
+.navigation-buttons {
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    gap: 71px;
+}
+
+.project-name {
+    font-weight: 600;
+    font-size: 34px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #212529;
+}
+
+.project {
+    display: flex;
+    /* .navbar(height: 90) + .project-name(padding "y":60px, content: 40px) . Total = 190px*/
+    height: calc(100vh - 190px);
+}
+
+/* Primer hijo */
+.project :nth-child(1) {
+    width: 20%;
+    border-right: 1px solid #fff;
+    background-color: red;
+}
+
+/* Segundo hijo */
+.project :nth-child(2) {
+    width: 80%;
+    background-color: blue;
+}
